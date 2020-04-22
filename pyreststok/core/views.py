@@ -12,56 +12,56 @@ from .serializer import CondominiumSerializer, Client_AddressSerializer, Product
 from .serializer import StokSerializer, ItemSerializer, Stok_MovimentSerializer
 
 
-class ClientViewSet(views.ModelViewSet):
-    queryset = Client.object.all()
+class ClientViewSet(viewsets.ModelViewSet):
+    queryset = Client.objects.all()
     serializer_class = ClientSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_field = ['name','doc']
 
-class Stok_TypeViewSet(views.ModelViewSet):
-    queryset = Stok_Type.object.all()
+class Stok_TypeViewSet(viewsets.ModelViewSet):
+    queryset = Stok_Type.objects.all()
     serializer_class = Stok_TypeSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_field = ['name']
 
-class Product_TypeViewSet(views.ModelViewSet):
-    queryset = Product_Type.object.all()
+class Product_TypeViewSet(viewsets.ModelViewSet):
+    queryset = Product_Type.objects.all()
     serializer_class = Product_TypeSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_field = ['name']
 
-class CondominiumViewSet(views.ModelViewSet):
-    queryset = Condominium.object.all()
+class CondominiumViewSet(viewsets.ModelViewSet):
+    queryset = Condominium.objects.all()
     serializer_class = CondominiumSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_field = ['name','address','neighborhood','city']
 
-class Client_AddressViewSet(views.ModelViewSet):
-    queryset = Client_Address.object.all()
+class Client_AddressViewSet(viewsets.ModelViewSet):
+    queryset = Client_Address.objects.all()
     serializer_class = Client_AddressSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_field = ['Client', 'Condominium']
 
-class ProductViewSet(views.ModelViewSet):
-    queryset = Product.object.all()
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_field = ['name','Product_Type']
 
-class StokViewSet(views.ModelViewSet):
-    queryset = Stok.object.all()
+class StokViewSet(viewsets.ModelViewSet):
+    queryset = Stok.objects.all()
     serializer_class = StokSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_field = ['name','Stok_Type']
 
-class ItemViewSet(views.ModelViewSet):
-    queryset = Item.object.all()
+class ItemViewSet(viewsets.ModelViewSet):
+    queryset = Item.objects.all()
     serializer_class = ItemSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_field = ['sn', 'Product','Stok','User']
 
-class Stok_MovimentViewSet(views.ModelViewSet):
-    queryset = Client.object.all()
-    serializer_class = ClientSerializer
+class Stok_MovimentViewSet(viewsets.ModelViewSet):
+    queryset = Stok_Moviment.objects.all()
+    serializer_class = Stok_MovimentSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_field = ['Item', 'Stok', 'User']

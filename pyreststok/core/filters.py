@@ -45,8 +45,9 @@ class Client_AddressFilter(filters.FilterSet):
     class Meta:
         model = Client_Address
         fields = {
-            'Client',
-            'Condominium'
+            'client',
+            'condominium'
+
         }
 
 class ProductFilter(filters.FilterSet):
@@ -54,8 +55,7 @@ class ProductFilter(filters.FilterSet):
     class Meta:
         model = Product
         fields = {
-            'name' : ['icontains'],
-            'Product_Type'
+            'name' : ['icontains']
         }
 
 class StokFilter(filters.FilterSet):
@@ -64,7 +64,6 @@ class StokFilter(filters.FilterSet):
         model = Stok
         fields = {
             'name' : ['icontains'],
-            'Stok_Type'
         }
 
 class ItemFilter(filters.FilterSet):
@@ -72,10 +71,7 @@ class ItemFilter(filters.FilterSet):
     class Meta:
         model = Item
         fields = {
-            'Product',
-            'Stok',
-            'User',
-            'sn' : ['icontains']
+            'sn':['icontains']
         }
 
 class Stok_MovimentFilter(filters.FilterSet):
@@ -83,7 +79,7 @@ class Stok_MovimentFilter(filters.FilterSet):
     class Meta:
         model = Stok_Moviment
         fields = {
-            'Item',
-            'Stok',
-            'User'
+            'item',
+            'stok',
+            'user'
         }

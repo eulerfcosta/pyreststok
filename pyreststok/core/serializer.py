@@ -10,55 +10,55 @@ from .filters import StokFilter, ItemFilter, Stok_MovimentFilter
 
 
 
-class ClientSerializer(serializer.ModelSerializer):
+class ClientSerializer(serializers.ModelSerializer):
     filterset_class = ClientFilter
     class Meta:
         model = Client
         exclude = []
 
-class Stok_TypeSerializer(serializer.ModelSerializer):
+class Stok_TypeSerializer(serializers.ModelSerializer):
     filterset_class = Stok_TypeFilter
     class Meta:
         model = Stok_Type
         exclude = []
 
-class Product_TypeSerializer(serializer.ModelSerializer):
+class Product_TypeSerializer(serializers.ModelSerializer):
     filterset_class = Product_TypeFilter
     class Meta:
         model = Product_Type
         exclude = []
 
-class CondominiumSerializer(serializer.ModelSerializer):
+class CondominiumSerializer(serializers.ModelSerializer):
     filterset_class = CondominiumFilter
     class Meta:
         model = Condominium
         exclude = []
 
-class Client_AddressSerializer(serializer.ModelSerializer):
+class Client_AddressSerializer(serializers.ModelSerializer):
     filterset_class = Client_AddressFilter
     class Meta:
         model = Client_Address
         exclude = []
 
-class ProductSerializer(serializer.ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     filterset_class = ProductFilter
     class Meta:
         model = Product
         exclude = []
 
-class StokSerializer(serializer.ModelSerializer):
+class StokSerializer(serializers.ModelSerializer):
     filterset_class = StokFilter
     class Meta:
         model = Stok
         exclude = []
 
-class ItemSerializer(serializer.ModelSerializer):
+class ItemSerializer(serializers.ModelSerializer):
     filterset_class = ItemFilter
     class Meta:
         model = Item
         exclude = []
 
-class Stok_MovimentSerializer(serializer.ModelSerializer):
+class Stok_MovimentSerializer(serializers.ModelSerializer):
     filterset_class = Stok_MovimentFilter
     class Meta:
         model = Stok_Moviment

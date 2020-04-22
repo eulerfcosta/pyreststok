@@ -21,5 +21,5 @@ from core.urls import core_urls
 urlpatterns = [
     #path('',include(core_urls)),
     path('admin/', admin.site.urls),
-    #path('pyreststok/api/', include(core_urls))
+    path('pyreststok/api/', include(core_urls))
 ]

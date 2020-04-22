@@ -1,7 +1,7 @@
 from django_filters import rest_framework as filters
 
-from .models Client , Stok_Type, Product_Type, Condominium,Client_Address
-from .models Product, Stok, Item, Stok_Moviment
+from .models import Client , Stok_Type, Product_Type, Condominium,Client_Address
+from .models import Product, Stok, Item, Stok_Moviment
 
 
 class ClientFilter(filters.FilterSet):
